@@ -1,15 +1,18 @@
-class HomePage{
+import AbstractPage from "./AbstractPage";
+
+class HomePage extends AbstractPage{
     //Here Selectors
-    public get signInButton(){
-        return $('#signin_button');
+    public get feedbackLink(){
+        return $('#feedback');
     }
+
     //Here Functions
     public async visit(){
         await browser.url('http://zero.webappsecurity.com/');
     }
 
-    public async clickSignInButton(){
-        await this.signInButton.click();
+    public async clickFeedbackLink(){
+        await this.feedbackLink.click();
     }
 }
 
